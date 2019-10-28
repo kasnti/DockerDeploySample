@@ -1,0 +1,50 @@
+﻿version: '3.4'
+
+services:
+  samplems.mysql:
+    image: mysql
+    container_name: samplems.mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql@samplems
+      - TZ=Asia/Shanghai
+    volumes:
+      - /app/data/mysql:/var/lib/mysql
+    networks:
+      - samplems-net
+
+  samplems.web:
+    image: samplemsweb
+    container_name: samplems.web
+    restart: always
+    depends_on:
+      - samplems.mysql
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - samplems-net
+
+
+  samplems.nginx:
+    image: nginx
+    container_name: samplems.nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /app/data/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /app/data/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /app/logs/nginxlogs:/var/log/nginx
+    depends_on:
+      - samplems.web
+    networks:
+      - samplems-net
+
+networks:
+  samplems-net:
+    driver: bridge

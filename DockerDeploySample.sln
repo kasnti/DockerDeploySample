@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{858801BD-2B0C-4BF4-9A9E-6FF3396BE55C}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\docker-compose.yml = deploy\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{59A7F2B6-B1DF-4E8B-9E9F-C117E2859EE2}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\web\Dockerfile = deploy\web\Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{FEDDCC4A-A43B-4EEE-9343-9272468ABCE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{162930A9-CF95-4AA1-864E-0A360F273805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "confs", "confs", "{1161B9FA-DA75-4574-9CF5-DEB23B645A60}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\nginx\confs\default.conf = deploy\nginx\confs\default.conf
+		deploy\nginx\confs\nginx.conf = deploy\nginx\confs\nginx.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{83951283-4EC6-401B-81A7-B4A6C1679506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "src\Models\Models.csproj", "{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{F5DD0237-7215-4A86-BEC1-2A449DD65319}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24960506-98FD-4693-AF20-6686274400D0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5DD0237-7215-4A86-BEC1-2A449DD65319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DD0237-7215-4A86-BEC1-2A449DD65319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DD0237-7215-4A86-BEC1-2A449DD65319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DD0237-7215-4A86-BEC1-2A449DD65319}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59A7F2B6-B1DF-4E8B-9E9F-C117E2859EE2} = {858801BD-2B0C-4BF4-9A9E-6FF3396BE55C}
+		{FEDDCC4A-A43B-4EEE-9343-9272468ABCE6} = {59A7F2B6-B1DF-4E8B-9E9F-C117E2859EE2}
+		{162930A9-CF95-4AA1-864E-0A360F273805} = {858801BD-2B0C-4BF4-9A9E-6FF3396BE55C}
+		{1161B9FA-DA75-4574-9CF5-DEB23B645A60} = {162930A9-CF95-4AA1-864E-0A360F273805}
+		{ED4977FE-301A-4AD8-BE31-8B4D0CF12C2D} = {83951283-4EC6-401B-81A7-B4A6C1679506}
+		{F5DD0237-7215-4A86-BEC1-2A449DD65319} = {83951283-4EC6-401B-81A7-B4A6C1679506}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {221B347A-9A81-4872-A356-259E891D0147}
+	EndGlobalSection
+EndGlobal
